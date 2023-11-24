@@ -8,7 +8,7 @@ speed_y = 0;
 
 /// @function				mov();
 /// @description			Controla a movimentação do player.
-mov = function(){
+mov = function() {
 	// Definindo as variáveis de movimentação
 	var _up, _right, _down, _left;
 
@@ -25,4 +25,14 @@ mov = function(){
 	// Movimentando o player
 	x += speed_x;
 	y += speed_y;
+}
+
+/// @function				shooting();
+/// @description			Controla o mouse e os disparos do player.
+shooting = function() {
+	// Captura a direção que o mouse esta apontando
+	var _dir = point_direction(x, y, mouse_x, mouse_y);
+	
+	// Altera o ângulo da sprite a partir da direção
+	image_angle = _dir;
 }

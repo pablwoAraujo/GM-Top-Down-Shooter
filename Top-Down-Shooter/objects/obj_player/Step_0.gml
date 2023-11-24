@@ -3,3 +3,6 @@
 
 // Movimentando o player
 mov();
+
+// Controle do mouse e disparos
+shooting();
