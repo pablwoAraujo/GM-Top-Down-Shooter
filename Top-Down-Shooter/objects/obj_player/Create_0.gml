@@ -57,6 +57,9 @@ shooting = function() {
 
 	// Checa se o countdown do tiro chegou a zero
 	if (shot_countdown <= 0) {
+		// Voltando para a sprite normal
+		sprite_index = spr_player;
+
 		// Checa se o mouse está sendo pressionado
 		if (_mb_left) {
 			// Cria o disparo e guarda na variável
@@ -66,13 +69,16 @@ shooting = function() {
 			_shot.direction = _dir;
 			_shot.image_angle = _dir;
 			_shot.speed = shot_speed;
-			
+
 			// Resetando o countdown do tiro
 			shot_countdown = shot_waiting_time;
+
+			// Trocando a sprite do player
+			sprite_index = spr_player_shooting;
 		}
 	} else {
 		// Se o countdown é maior que zero então decremente
-		shot_countdown --;	
+		shot_countdown --;
 	}
 	
 }
