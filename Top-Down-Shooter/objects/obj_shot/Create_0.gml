@@ -1,9 +1,20 @@
 /// @description Inserir descrição aqui
 // Você pode escrever seu código neste editor
 
+// Definindo as variáveis de controle
+time_until_destruction = room_speed * 3;
+
 // Iniciando maior
 image_xscale = 3;
 image_yscale = image_xscale;
+
+/// @function				self_destruction();
+/// @description			Se autodestroi depois de um tempo.
+self_destruction = function() {
+	time_until_destruction --;
+	
+	if (time_until_destruction <= 0) instance_destroy();
+}
 
 /// @function				decreasing_size();
 /// @description			Volta a escala da imagem ao normal.
