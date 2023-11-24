@@ -3,3 +3,6 @@
 
 // Voltando para o tamanho normal
 decreasing_size();
+
+// Se autodestruindo
+self_destruction();
