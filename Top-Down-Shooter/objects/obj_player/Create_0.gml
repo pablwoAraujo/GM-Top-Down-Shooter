@@ -1,11 +1,15 @@
 /// @description Inserir descrição aqui
 // Você pode escrever seu código neste editor
 
-// Definindo as variáveis de controle
+// Definindo as variáveis de controle do player
 player_speed = 5;
-shot_speed = 10;
 speed_x = 0;
 speed_y = 0;
+
+// Definindo as variáveis de controle do disparo
+shot_speed = 10;
+shot_countdown = 0;
+shot_waiting_time = room_speed * 0.2;
 
 /// @function				mov();
 /// @description			Controla a movimentação do player.
@@ -51,14 +55,24 @@ shooting = function() {
 	// Altera o ângulo da sprite a partir da direção
 	image_angle = _dir;
 
-	// Checa se o mouse está sendo pressionado
-	if (_mb_left) {
-		// Cria o disparo e guarda na variável
-		var _shot = instance_create_layer(x, y, "Shots", obj_shot);	
+	// Checa se o countdown do tiro chegou a zero
+	if (shot_countdown <= 0) {
+		// Checa se o mouse está sendo pressionado
+		if (_mb_left) {
+			// Cria o disparo e guarda na variável
+			var _shot = instance_create_layer(x, y, "Shots", obj_shot);	
 
-		// Definindo a direção, ângulo e velocidade do disparo
-		_shot.direction = _dir;
-		_shot.image_angle = _dir;
-		_shot.speed = shot_speed;
+			// Definindo a direção, ângulo e velocidade do disparo
+			_shot.direction = _dir;
+			_shot.image_angle = _dir;
+			_shot.speed = shot_speed;
+			
+			// Resetando o countdown do tiro
+			shot_countdown = shot_waiting_time;
+		}
+	} else {
+		// Se o countdown é maior que zero então decremente
+		shot_countdown --;	
 	}
+	
 }
