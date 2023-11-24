@@ -3,6 +3,7 @@
 
 // Definindo as variáveis de controle
 player_speed = 5;
+shot_speed = 10;
 speed_x = 0;
 speed_y = 0;
 
@@ -21,11 +22,11 @@ mov = function() {
 	// Calculando as velocidades do player no eixo x e y
 	speed_y = (_down - _up) * player_speed;
 	speed_x = (_right - _left) * player_speed;
-	
+
 	// Movimentando o player
 	x += speed_x;
 	y += speed_y;
-	
+
 	// Controlando a velocidade da animação
 	// Se o player estiver em movimento
 	if (speed_y != 0 or speed_x != 0) {
@@ -41,9 +42,23 @@ mov = function() {
 /// @function				shooting();
 /// @description			Controla o mouse e os disparos do player.
 shooting = function() {
+	// Captura o click no mouse esquerdo
+	var _mb_left = mouse_check_button(mb_left);
+
 	// Captura a direção que o mouse esta apontando
 	var _dir = point_direction(x, y, mouse_x, mouse_y);
-	
+
 	// Altera o ângulo da sprite a partir da direção
 	image_angle = _dir;
+
+	// Checa se o mouse está sendo pressionado
+	if (_mb_left) {
+		// Cria o disparo e guarda na variável
+		var _shot = instance_create_layer(x, y, "Shots", obj_shot);	
+
+		// Definindo a direção, ângulo e velocidade do disparo
+		_shot.direction = _dir;
+		_shot.image_angle = _dir;
+		_shot.speed = shot_speed;
+	}
 }
