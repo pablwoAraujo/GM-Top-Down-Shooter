@@ -25,6 +25,17 @@ mov = function() {
 	// Movimentando o player
 	x += speed_x;
 	y += speed_y;
+	
+	// Controlando a velocidade da animação
+	// Se o player estiver em movimento
+	if (speed_y != 0 or speed_x != 0) {
+		// liga a animação
+		image_speed = 1;
+	} else {
+		// Se não, para a animação
+		image_index = 2;
+		image_speed = 0;
+	}
 }
 
 /// @function				shooting();
