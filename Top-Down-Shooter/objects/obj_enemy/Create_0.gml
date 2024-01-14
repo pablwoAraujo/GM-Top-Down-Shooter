@@ -90,15 +90,19 @@ take_damage = function(_damage) {
 
 // Explodindo
 explode = function() {
+	// Criando o vestígio do inimigo
+	var _remains = instance_create_layer(x, y, layer, obj_remains_of_the_enemy);
+	_remains.image_angle = direction;
+
 	// Criando um número aleatório de pedaços
-	var _amount = irandom_range(10,20);
+	var _amount = irandom_range(6, 10);
 	
 	repeat(_amount) {
 		// Instanciando um pedaço
 		var _piece = instance_create_layer(x, y, layer, obj_pieces_of_the_enemy);
 
 		// Dando velocidade ao pedaço
-		_piece.speed = 6;
+		_piece.speed = random_range(4, 6);
 		// Dando uma direção aleatória ao pedaco
 		_piece.direction = irandom(359);
 		// Apontando ele na direção correta
