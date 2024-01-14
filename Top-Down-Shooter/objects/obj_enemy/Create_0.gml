@@ -102,7 +102,7 @@ explode = function() {
 		// Dando uma direção aleatória ao pedaco
 		_piece.direction = irandom(359);
 		// Apontando ele na direção correta
-		_piece.image_alpha = _piece.direction;
+		_piece.image_angle = _piece.direction;
 	}
 }
 
