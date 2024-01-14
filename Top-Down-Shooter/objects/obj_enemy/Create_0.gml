@@ -7,6 +7,9 @@ movement_direction_countdown = room_speed * random_range(4, 8);
 // Distância limite que o obj vai seguir o player
 range_to_follow = 200;
 
+// Vida do inimigo
+life = 1;
+
 // Método para definir a velocidade e a direção do objeto
 defines_the_movement = function() {
 	// Definindo uma direção aleatória
@@ -66,6 +69,20 @@ follow_the_player = function() {
 			// Definindo uma velocidade padrão
 			speed = 1;
 		}
+	}
+}
+
+// Levando dano
+take_damage = function(_damage) {
+	// Garantindo um dano mínimo
+	if (_damage == undefined || _damage <= 0) {
+		damage = 1;
+	}
+	// Perdendo vida
+	life -= _damage;
+	// Destruindo o obj se a vida for zerada
+	if (life <= 0) {
+		instance_destroy();
 	}
 }
 
