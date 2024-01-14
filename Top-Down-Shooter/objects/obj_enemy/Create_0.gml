@@ -1,6 +1,9 @@
 /// @description Inserir descrição aqui
 // Você pode escrever seu código neste editor
 
+// Countdown para mudar a direção do movimento
+movement_direction_countdown = room_speed * random_range(4, 8);
+
 // Método para definir a velocidade e a direção do objeto
 defines_the_movement = function() {
 	// Definindo uma direção aleatória
@@ -28,6 +31,20 @@ movement_limit = function() {
 	escaping_down = (y + sprite_height/2 > room_height)
 
 	if (escaping_upward || escaping_down) vspeed *= -1;
+}
+
+// Diminuindo o tempo do countdown
+decreasing_the_countdown = function() {
+	movement_direction_countdown --;
+
+	if (movement_direction_countdown <= 0) {
+		// Define uma nova direção e velocidade
+		defines_the_movement();
+
+		// Redefine o countdown
+		movement_direction_countdown = room_speed * random_range(4, 8);
+	}
+
 }
 
 defines_the_movement();
