@@ -83,6 +83,26 @@ take_damage = function(_damage) {
 	// Destruindo o obj se a vida for zerada
 	if (life <= 0) {
 		instance_destroy();
+		// Explodindo
+		explode();
+	}
+}
+
+// Explodindo
+explode = function() {
+	// Criando um número aleatório de pedaços
+	var _amount = irandom_range(10,20);
+	
+	repeat(_amount) {
+		// Instanciando um pedaço
+		var _piece = instance_create_layer(x, y, layer, obj_pieces_of_the_enemy);
+
+		// Dando velocidade ao pedaço
+		_piece.speed = 6;
+		// Dando uma direção aleatória ao pedaco
+		_piece.direction = irandom(359);
+		// Apontando ele na direção correta
+		_piece.image_alpha = _piece.direction;
 	}
 }
 
