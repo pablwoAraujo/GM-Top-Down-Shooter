@@ -6,3 +6,6 @@ decreasing_size();
 
 // Se autodestruindo
 self_destruction();
+
+// Colidindo com o inimigo
+crashing_into_the_enemy();

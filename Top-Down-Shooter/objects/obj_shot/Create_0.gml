@@ -8,6 +8,9 @@ time_until_destruction = room_speed * 3;
 image_xscale = 3;
 image_yscale = image_xscale;
 
+// Dano do disparo
+damage = 1;
+
 /// @function				self_destruction();
 /// @description			Se autodestroi depois de um tempo.
 self_destruction = function() {
@@ -37,4 +40,19 @@ adding_shooting_effect = function() {
 
 	// Resetando o blend mode
 	gpu_set_blendmode(bm_normal);
+}
+
+// Colidindo com o inimigo
+crashing_into_the_enemy = function() {
+	// Pegando o id do inimigo
+	var _enemy_id = instance_place(x, y, obj_enemy);
+
+	// Verificando se ouve a colisão
+	if (_enemy_id) {
+		// Dando dano no inimigo
+		_enemy_id.take_damage(1);
+
+		// Se destruindo
+		instance_destroy();
+	}
 }
