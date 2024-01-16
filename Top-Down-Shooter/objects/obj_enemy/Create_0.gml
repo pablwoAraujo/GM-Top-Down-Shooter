@@ -8,7 +8,7 @@ movement_direction_countdown = room_speed * random_range(4, 8);
 range_to_follow = 200;
 
 // Vida do inimigo
-life = 1;
+life = 3;
 
 // Método para definir a velocidade e a direção do objeto
 defines_the_movement = function() {
