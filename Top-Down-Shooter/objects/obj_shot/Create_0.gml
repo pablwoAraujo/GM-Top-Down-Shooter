@@ -11,6 +11,9 @@ image_yscale = image_xscale;
 // Dano do disparo
 damage = 1;
 
+// Tamanho do tremor
+shake = 3;
+
 /// @function				self_destruction();
 /// @description			Se autodestroi depois de um tempo.
 self_destruction = function() {
@@ -57,5 +60,9 @@ crashing_into_the_enemy = function() {
 
 		// Criando o impacto do disparo
 		instance_create_layer(x, y, layer, obj_shot_impact);
+
+		// Fazendo a tela tremer
+		// Vertificando se o valor novo é maior que o atual
+		if (global.shake < shake) global.shake = shake;
 	}
 }

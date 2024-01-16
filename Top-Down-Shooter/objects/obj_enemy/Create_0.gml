@@ -10,6 +10,9 @@ range_to_follow = 200;
 // Vida do inimigo
 life = 3;
 
+// Tamanho do tremor
+shake = 10;
+
 // Método para definir a velocidade e a direção do objeto
 defines_the_movement = function() {
 	// Definindo uma direção aleatória
@@ -86,8 +89,9 @@ take_damage = function(_damage) {
 		// Explodindo
 		explode();
 		
-		// Dando um valor para o screenshake 
-		global.shake = 10;
+		// Fazendo a tela tremer
+		// Vertificando se o valor novo é maior que o atual
+		if (global.shake < shake) global.shake = shake;
 	}
 }
 
