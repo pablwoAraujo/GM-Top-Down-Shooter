@@ -54,5 +54,8 @@ crashing_into_the_enemy = function() {
 
 		// Se destruindo
 		instance_destroy();
+
+		// Criando o impacto do disparo
+		instance_create_layer(x, y, layer, obj_shot_impact);
 	}
 }
