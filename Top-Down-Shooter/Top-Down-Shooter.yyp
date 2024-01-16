@@ -37,6 +37,7 @@
     {"id":{"name":"obj_remains_of_the_enemy","path":"objects/obj_remains_of_the_enemy/obj_remains_of_the_enemy.yy",},},
     {"id":{"name":"spr_shot","path":"sprites/spr_shot/spr_shot.yy",},},
     {"id":{"name":"spr_big_enemy","path":"sprites/spr_big_enemy/spr_big_enemy.yy",},},
+    {"id":{"name":"obj_enemy","path":"objects/obj_enemy/obj_enemy.yy",},},
     {"id":{"name":"spr_player","path":"sprites/spr_player/spr_player.yy",},},
     {"id":{"name":"spr_remains_of_the_enemy","path":"sprites/spr_remains_of_the_enemy/spr_remains_of_the_enemy.yy",},},
     {"id":{"name":"spr_player_shooting","path":"sprites/spr_player_shooting/spr_player_shooting.yy",},},
@@ -50,7 +51,7 @@
     {"id":{"name":"spr_pieces_of_the_enemy","path":"sprites/spr_pieces_of_the_enemy/spr_pieces_of_the_enemy.yy",},},
     {"id":{"name":"spr_shooting_effect","path":"sprites/spr_shooting_effect/spr_shooting_effect.yy",},},
     {"id":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},},
-    {"id":{"name":"obj_enemy","path":"objects/obj_enemy/obj_enemy.yy",},},
+    {"id":{"name":"obj_small_enemy","path":"objects/obj_small_enemy/obj_small_enemy.yy",},},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
   ],
   "RoomOrderNodes": [
