@@ -85,6 +85,9 @@ take_damage = function(_damage) {
 		instance_destroy();
 		// Explodindo
 		explode();
+		
+		// Dando um valor para o screenshake 
+		global.shake = 10;
 	}
 }
 
