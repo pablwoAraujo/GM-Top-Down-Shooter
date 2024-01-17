@@ -9,3 +9,6 @@ shooting();
 
 // Verifica se o player levou dano
 take_damage();
+
+// Verificando se o player esta invulnerável e voltando ao estágio vulnerável
+becoming_vulnerable();
