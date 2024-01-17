@@ -5,6 +5,7 @@
 player_speed = 5;
 speed_x = 0;
 speed_y = 0;
+life = 3;
 
 // Definindo as variáveis de controle do disparo
 shot_speed = 10;
@@ -80,5 +81,22 @@ shooting = function() {
 		// Se o countdown é maior que zero então decremente
 		shot_countdown --;
 	}
+}
+
+// Levando dano
+take_damage = function() {
+	// Capturando o objeto que colidiu
+	var _enemy = instance_place(x, y, obj_enemy);
 	
+	// Checando se ouve a colisão
+	if (_enemy) {
+		// Levando dano
+		life -= _enemy.damage;
+		
+		// Checando se a vida do player chegou a zero
+		if (life <= 0) {
+			// Se destruindo
+			instance_destroy();	
+		}
+	}
 }

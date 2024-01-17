@@ -4,6 +4,9 @@
 // Vida do inimigo (default)
 life = 3;
 
+// Dano no player
+damage = 1;
+
 // Tamanho do tremor (default)
 shake = 10;
 
