@@ -9,6 +9,7 @@ life = 3;
 invulnerable = false;
 invulnerable_time = room_speed * 3;
 invulnerable_countdown = 0;
+alpha_value = 0.2;
 
 // Definindo as variáveis de controle do disparo
 shot_speed = 10;
@@ -111,9 +112,16 @@ take_damage = function() {
 // Perdendo a invulnerabilidade
 becoming_vulnerable = function() {
 	if (invulnerable && invulnerable_countdown > 0) {
+		// Fazendo a imagem "piscar" quando o player esta invulnerável
+		image_alpha += alpha_value;
+		if (image_alpha > 1 or image_alpha < 0) alpha_value *= -1;
+
+		// Decrementando o contdown
 		invulnerable_countdown --;
 		
+		// Se o contdown chegar ao fim o player volta ao estado de vulnerabilidade
 		if (invulnerable_countdown <= 0) {
+			image_alpha = 1;
 			invulnerable = false	;
 			invulnerable_countdown = invulnerable_time;
 		}
