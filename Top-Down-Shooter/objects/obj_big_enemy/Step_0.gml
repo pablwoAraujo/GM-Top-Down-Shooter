@@ -3,3 +3,6 @@
 
 // Herdando as informações do pai
 event_inherited();
+
+// Pondo ovos de inimigos
+laying_eggs();
