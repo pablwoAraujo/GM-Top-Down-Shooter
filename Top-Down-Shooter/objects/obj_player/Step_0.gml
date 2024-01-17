@@ -6,3 +6,6 @@ mov();
 
 // Controle do mouse e disparos
 shooting();
+
+// Verifica se o player levou dano
+take_damage();
