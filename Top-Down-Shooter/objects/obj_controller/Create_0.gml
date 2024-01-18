@@ -3,6 +3,8 @@
 
 // Nível do jogo
 global.level = 1;
+// Vidas do player
+global.life = 3;
 
 // Distância miníma das bordas da room que os objetos devem ser gerados 
 safety_margin = 100;
