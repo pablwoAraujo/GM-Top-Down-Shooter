@@ -45,6 +45,17 @@ mov = function() {
 		image_index = 2;
 		image_speed = 0;
 	}
+	
+	movement_limit();
+}
+
+// Impedindo que o player saia da room
+movement_limit = function() {
+	// Impedindo que ele saia da room na horizontal
+	x = clamp(x, sprite_width/2, room_width - sprite_width/2);
+
+	// Impedindo que ele saia da room na vertical
+	y = clamp(y, sprite_height/2, room_height - sprite_height/2);
 }
 
 /// @function				shooting();
