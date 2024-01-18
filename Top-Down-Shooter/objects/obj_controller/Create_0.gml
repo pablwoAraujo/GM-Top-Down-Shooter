@@ -1,6 +1,9 @@
 /// @description Inserir descrição aqui
 // Você pode escrever seu código neste editor
 
+// Nível do jogo
+global.level = 1;
+
 // Distância miníma das bordas da room que os objetos devem ser gerados 
 safety_margin = 100;
 
@@ -19,8 +22,8 @@ getting_started = function() {
 
 // Gera inimigos dentro da room
 spawns_enemies = function() {
-	// Quantidade de inimigos gerados
-	var _quant = irandom_range(3, 7);
+	// Quantidade de inimigos gerados de acordo com o nível do jogo
+	var _quant = irandom_range(3, 7) * global.level;
 
 	repeat(_quant) {
 		// Pegando uma posição aleatória
@@ -55,5 +58,10 @@ next_level = function() {
 	// Checa quantos inimigos grandes existem
 	var _number_of_enemies = instance_number(obj_big_enemy);
 
-	if (_number_of_enemies <= 0) room_restart();
+	if (_number_of_enemies <= 0) {
+		// Subindo de nível
+		global.level ++;
+		// Reiniciando a room
+		room_restart();	
+	}
 }
