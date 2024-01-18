@@ -49,3 +49,11 @@ generate_random_positions = function() {
 
 	return [_x, _y];
 }
+
+// Passando para o próximo nível
+next_level = function() {
+	// Checa quantos inimigos grandes existem
+	var _number_of_enemies = instance_number(obj_big_enemy);
+
+	if (_number_of_enemies <= 0) room_restart();
+}
