@@ -9,6 +9,13 @@ safety_margin = 100;
 
 // Iniciando a room
 getting_started = function() {
+	// Alterando as dimensões da room
+	var _width = irandom_range(2000, 5000);
+	var _height = irandom_range(2000, 5000);
+	
+	room_width = _width;
+	room_height = _height;
+	
 	// Criando o screenshake
 	instance_create_layer(0, 0, layer, obj_screenshake);
 
