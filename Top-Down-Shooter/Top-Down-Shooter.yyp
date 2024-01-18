@@ -52,6 +52,7 @@
     {"id":{"name":"spr_pieces_of_the_enemy","path":"sprites/spr_pieces_of_the_enemy/spr_pieces_of_the_enemy.yy",},},
     {"id":{"name":"spr_enemy_egg","path":"sprites/spr_enemy_egg/spr_enemy_egg.yy",},},
     {"id":{"name":"spr_shooting_effect","path":"sprites/spr_shooting_effect/spr_shooting_effect.yy",},},
+    {"id":{"name":"obj_controller","path":"objects/obj_controller/obj_controller.yy",},},
     {"id":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},},
     {"id":{"name":"obj_small_enemy","path":"objects/obj_small_enemy/obj_small_enemy.yy",},},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
