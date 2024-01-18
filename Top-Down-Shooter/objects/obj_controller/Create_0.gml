@@ -12,10 +12,17 @@ getting_started = function() {
 	// Alterando as dimensões da room
 	var _width = irandom_range(2000, 5000);
 	var _height = irandom_range(2000, 5000);
-	
+
 	room_width = _width;
 	room_height = _height;
-	
+
+	// Alterando o background da room
+	var _background = choose(spr_level_01_background, spr_level_02_background, spr_level_03_background);
+	var _lay_id = layer_get_id("Background");
+	var _lay_bg = layer_background_get_id(_lay_id);
+
+	layer_background_sprite(_lay_bg, _background);
+
 	// Criando o screenshake
 	instance_create_layer(0, 0, layer, obj_screenshake);
 
