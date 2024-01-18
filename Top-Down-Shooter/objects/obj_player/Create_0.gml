@@ -5,7 +5,6 @@
 player_speed = 5;
 speed_x = 0;
 speed_y = 0;
-life = 3;
 invulnerable = false;
 invulnerable_time = room_speed * 3;
 invulnerable_countdown = 0;
@@ -95,10 +94,10 @@ take_damage = function() {
 	// Checando se o player não esta invulnerável e se ouve a colisão
 	if (!invulnerable and _enemy) {
 		// Levando dano
-		life -= _enemy.damage;
+		global.life -= _enemy.damage;
 		
 		// Checando se a vida do player chegou a zero
-		if (life < 0) {
+		if (global.life < 0) {
 			// Se destruindo
 			instance_destroy();
 		}
