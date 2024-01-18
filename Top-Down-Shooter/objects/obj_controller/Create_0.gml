@@ -39,9 +39,9 @@ getting_started = function() {
 // Gera inimigos dentro da room
 spawns_enemies = function() {
 	// Quantidade de inimigos gerados de acordo com o nível do jogo
-	var _quant = irandom_range(3, 7) * global.level;
+	var _number_of_enemies = irandom_range(3, 7) * global.level;
 
-	repeat(_quant) {
+	repeat(_number_of_enemies){
 		// Pegando uma posição aleatória
 		var _positions = generate_random_positions();
 
