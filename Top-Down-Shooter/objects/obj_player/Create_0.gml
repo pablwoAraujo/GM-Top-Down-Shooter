@@ -98,9 +98,9 @@ take_damage = function() {
 		life -= _enemy.damage;
 		
 		// Checando se a vida do player chegou a zero
-		if (life <= 0) {
+		if (life < 0) {
 			// Se destruindo
-			instance_destroy();	
+			instance_destroy();
 		}
 		
 		// Ficando invulnerável
