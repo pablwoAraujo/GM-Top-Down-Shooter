@@ -1,6 +1,9 @@
 /// @description Inserir descrição aqui
 // Você pode escrever seu código neste editor
 
+// Randomize o jogo
+randomize();
+
 // Nível do jogo
 global.level = 1;
 // Vidas do player

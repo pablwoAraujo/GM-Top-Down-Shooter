@@ -101,18 +101,21 @@ shooting = function() {
 take_damage = function() {
 	// Capturando o objeto que colidiu
 	var _enemy = instance_place(x, y, obj_enemy);
-	
+
 	// Checando se o player não esta invulnerável e se ouve a colisão
 	if (!invulnerable and _enemy) {
 		// Levando dano
 		global.life -= _enemy.damage;
-		
+
 		// Checando se a vida do player chegou a zero
 		if (global.life < 0) {
 			// Se destruindo
 			instance_destroy();
+
+			// Reinicie o jogo
+			game_restart();
 		}
-		
+
 		// Ficando invulnerável
 		invulnerable = true;
 		invulnerable_countdown = invulnerable_time;

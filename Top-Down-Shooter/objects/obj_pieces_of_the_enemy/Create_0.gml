@@ -22,8 +22,12 @@ collision = function() {
 		var _enemy = instance_place(x, y, obj_enemy);
 
 		if (_enemy) {
+			// Se o pedaço acetar um inimigo pequeno, ele também vai explodir e dar dano
+			_enemy.piece_deals_damage = true;
+			
 			// Dando dano nos inimigos
 			_enemy.take_damage(1);
+
 			// Se destruindo
 			instance_destroy();
 		}
