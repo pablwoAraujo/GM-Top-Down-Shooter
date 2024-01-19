@@ -17,7 +17,7 @@ maximum_speed = 2;
 minimum_time = 5;
 
 // Tempo minímo para mudar o movimento e por ovos
-maximum_time = 15;
+maximum_time = 10;
 
 // Número minímo de partes geradas pela explosão
 minimum_number_of_parts = 15;
