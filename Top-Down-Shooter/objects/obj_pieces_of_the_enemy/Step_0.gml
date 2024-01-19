@@ -3,3 +3,6 @@
 
 // Desaparencedo aos poucos
 disappearing();
+
+// Colidindo com os inimigos
+collision();

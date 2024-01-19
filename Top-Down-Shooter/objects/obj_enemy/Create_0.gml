@@ -28,6 +28,15 @@ maximum_number_of_parts = 10;
 // Countdown para mudar a direção do movimento
 movement_direction_countdown = room_speed * random_range(minimum_time, maximum_time);
 
+// Se o pedaço gerado na explosão vai dar dano nos outros inimigos (default)
+piece_deals_damage = false;
+
+// Velocidade máxima dos pedaços na explosão (default)
+maximum_speed_of_piece = 6;
+
+// Velocidade miníma dos pedaços na explosão (default)
+minimum_speed_of_piece = 4;
+
 // Método para definir a velocidade e a direção do objeto
 defines_the_movement = function() {
 	// Definindo uma direção aleatória
@@ -73,7 +82,7 @@ movement_limit = function() {
 // Levando dano
 take_damage = function(_damage) {
 	// Garantindo um dano mínimo
-	if (_damage == undefined || _damage <= 0) {
+	if (_damage == undefined) {
 		damage = 1;
 	}
 	// Perdendo vida
@@ -83,7 +92,7 @@ take_damage = function(_damage) {
 		instance_destroy();
 		// Explodindo
 		explode();
-		
+
 		// Fazendo a tela tremer
 		// Vertificando se o valor novo é maior que o atual
 		if (global.shake < shake) global.shake = shake;
@@ -98,13 +107,15 @@ explode = function() {
 
 	// Criando um número aleatório de pedaços
 	var _amount = irandom_range(minimum_number_of_parts, maximum_number_of_parts);
-	
+
 	repeat(_amount) {
 		// Instanciando um pedaço
 		var _piece = instance_create_layer(x, y, layer, obj_pieces_of_the_enemy);
 
+		// Dando dano nos outros inimigos
+		_piece.deal_damage = piece_deals_damage;
 		// Dando velocidade ao pedaço
-		_piece.speed = random_range(4, 6);
+		_piece.speed = random_range(minimum_speed_of_piece, maximum_speed_of_piece);
 		// Dando uma direção aleatória ao pedaco
 		_piece.direction = irandom(359);
 		// Apontando ele na direção correta
