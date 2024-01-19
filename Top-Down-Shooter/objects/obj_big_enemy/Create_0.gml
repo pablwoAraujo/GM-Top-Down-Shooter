@@ -14,7 +14,7 @@ shake = 20;
 maximum_speed = 2;
 
 // Tempo minímo para mudar o movimento e por ovos
-minimum_time = 10;
+minimum_time = 5;
 
 // Tempo minímo para mudar o movimento e por ovos
 maximum_time = 15;
@@ -27,6 +27,15 @@ maximum_number_of_parts = 20;
 
 // Contagem regressiva para o inimigo por ovos
 countdown_to_lay_eggs = room_speed * random_range(minimum_time, maximum_time);
+
+// Se o pedaço gerado na explosão vai dar dano nos outros inimigos
+piece_deals_damage = true;
+
+// Velocidade máxima dos pedaços na explosão
+maximum_speed_of_piece = 30;
+
+// Velocidade miníma dos pedaços na explosão
+minimum_speed_of_piece = 20;
 
 // Colocando ovos de inimigos
 laying_eggs = function() {
