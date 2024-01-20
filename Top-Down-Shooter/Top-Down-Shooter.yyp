@@ -36,6 +36,7 @@
   "resources": [
     {"id":{"name":"obj_remains_of_the_enemy","path":"objects/obj_remains_of_the_enemy/obj_remains_of_the_enemy.yy",},},
     {"id":{"name":"obj_enemy_egg","path":"objects/obj_enemy_egg/obj_enemy_egg.yy",},},
+    {"id":{"name":"obj_start_button","path":"objects/obj_start_button/obj_start_button.yy",},},
     {"id":{"name":"spr_shot","path":"sprites/spr_shot/spr_shot.yy",},},
     {"id":{"name":"spr_level_03_background","path":"sprites/spr_level_03_background/spr_level_03_background.yy",},},
     {"id":{"name":"spr_big_enemy","path":"sprites/spr_big_enemy/spr_big_enemy.yy",},},
@@ -43,6 +44,7 @@
     {"id":{"name":"spr_player","path":"sprites/spr_player/spr_player.yy",},},
     {"id":{"name":"spr_remains_of_the_enemy","path":"sprites/spr_remains_of_the_enemy/spr_remains_of_the_enemy.yy",},},
     {"id":{"name":"spr_player_shooting","path":"sprites/spr_player_shooting/spr_player_shooting.yy",},},
+    {"id":{"name":"obj_menu_controller","path":"objects/obj_menu_controller/obj_menu_controller.yy",},},
     {"id":{"name":"obj_screenshake","path":"objects/obj_screenshake/obj_screenshake.yy",},},
     {"id":{"name":"obj_shot","path":"objects/obj_shot/obj_shot.yy",},},
     {"id":{"name":"obj_big_enemy","path":"objects/obj_big_enemy/obj_big_enemy.yy",},},
@@ -51,6 +53,7 @@
     {"id":{"name":"spr_enemy","path":"sprites/spr_enemy/spr_enemy.yy",},},
     {"id":{"name":"spr_level_02_background","path":"sprites/spr_level_02_background/spr_level_02_background.yy",},},
     {"id":{"name":"obj_pieces_of_the_enemy","path":"objects/obj_pieces_of_the_enemy/obj_pieces_of_the_enemy.yy",},},
+    {"id":{"name":"spr_start_button","path":"sprites/spr_start_button/spr_start_button.yy",},},
     {"id":{"name":"spr_shot_impact","path":"sprites/spr_shot_impact/spr_shot_impact.yy",},},
     {"id":{"name":"spr_pieces_of_the_enemy","path":"sprites/spr_pieces_of_the_enemy/spr_pieces_of_the_enemy.yy",},},
     {"id":{"name":"spr_enemy_egg","path":"sprites/spr_enemy_egg/spr_enemy_egg.yy",},},
@@ -59,10 +62,12 @@
     {"id":{"name":"obj_controller","path":"objects/obj_controller/obj_controller.yy",},},
     {"id":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},},
     {"id":{"name":"obj_small_enemy","path":"objects/obj_small_enemy/obj_small_enemy.yy",},},
-    {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
+    {"id":{"name":"rm_intro","path":"rooms/rm_intro/rm_intro.yy",},},
+    {"id":{"name":"rm_game","path":"rooms/rm_game/rm_game.yy",},},
   ],
   "RoomOrderNodes": [
-    {"roomId":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
+    {"roomId":{"name":"rm_intro","path":"rooms/rm_intro/rm_intro.yy",},},
+    {"roomId":{"name":"rm_game","path":"rooms/rm_game/rm_game.yy",},},
   ],
   "templateType": "game",
   "TextureGroups": [
