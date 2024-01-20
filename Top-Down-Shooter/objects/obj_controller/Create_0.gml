@@ -4,8 +4,6 @@
 // Randomize o jogo
 randomize();
 
-// Nível do jogo
-global.level = 1;
 // Vidas do player
 global.life = 3;
 
@@ -42,7 +40,7 @@ getting_started = function() {
 // Gera inimigos dentro da room
 spawns_enemies = function() {
 	// Quantidade de inimigos gerados de acordo com o nível do jogo
-	var _number_of_enemies = irandom_range(3, 7) * global.level;
+	var _number_of_enemies = irandom_range(4, 6) * global.level;
 
 	repeat(_number_of_enemies){
 		// Pegando uma posição aleatória
